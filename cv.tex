@@ -1,0 +1,73 @@
+%
+% Template file for testing bib style file cv.bst
+%
+% @author : Apan Qasem (apan@txstate.edu)
+% @date: 12/130/2015 
+%
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{classic}    % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}       % color options 'blue' (default), 'orange',  'green', 'red', 'purple', 'grey' and 
+
+%\moderncvtheme[blue]{casual}           % optional argument are 'blue' (default), 'orange', 'red',
+                                        %'green','grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+
+
+\usepackage[T1]{fontenc}                % character encoding
+\usepackage[utf8x]{inputenc}            % replace by the encoding you are using
+\usepackage{amssymb}
+\usepackage{amsmath}
+%\usepackage{fontspec}
+%\usepackage{fontawesome}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\recomputelengths                      % required when changes are made to page layout lengths
+
+\fancyfoot{}                            % clear all footer fields
+\fancyfoot[LE,RO]{\thepage}             % page number in "outer" position of footer line
+\fancyfoot[RE,LO]{\footnotesize }       % other info in "inner" position of footer line
+
+% personal data
+\name{John}{Doe}
+\title{Curriculum Vitae}             
+%\address{601 University Drive}{San Marcos, TX 78666}   
+%\phone{(512) 245-0347}               
+%\email{apan@txstate.edu}             
+
+%\extrainfo{additional information (optional)} % optional, remove the line if not wanted
+
+%\photo[56pt]{figs/apan.jpg}                         % '64pt' is the height the picture must be
+%\homepage{http://www.cs.txstate.edu/\textasciitilde aq10}
+%\social[github][]{apanqasem}
+%\social[twitter][]{apanqasem}
+
+%\quote{"Quote''}
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\AfterPreamble{\hypersetup{
+  pdfauthor={John Doe},
+  pdftitle={CV for John Doe},
+  pdfsubject={Detailed CV for John},
+  urlcolor=blue,
+}}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\line(1,0){490}
+\end{center}
+
+% Publications from a BibTeX file
+\nocite{*} 
+\bibliographystyle{cv} 
+\bibliography{sample} 
+
+\end{document}
